@@ -105,7 +105,7 @@ BSTNode* BST::popMaximum() {
 */
 BSTNode* BST::popMinimum() {
     // YOUR CODE HERE
-    std::cout << "\nIn popMin\n";
+    // std::cout << "\nIn popMin\n";
     if(this->root == nullptr) {
         return nullptr;
     }
@@ -144,7 +144,7 @@ BSTNode* BST::insert(int key, int meta) {
 
 BSTNode* BST::insertHelper(BSTNode* current, int key, int meta) {
     if(current == nullptr) {
-        return new BSTNode(key, meta);
+        return new BSTNode(key, 0, meta);
     }
 
     if(key <= current->key) {
