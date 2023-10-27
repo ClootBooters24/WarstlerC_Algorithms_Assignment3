@@ -86,7 +86,6 @@ BSTNode* BST::popMaximum() {
     }
 
     if(max == this->root) {
-        //Max is the root node
         // std::cout << "\nFound Max\n";
         this->root = max->left;
     } else {
@@ -106,6 +105,7 @@ BSTNode* BST::popMaximum() {
 */
 BSTNode* BST::popMinimum() {
     // YOUR CODE HERE
+    std::cout << "\nIn popMin\n";
     if(this->root == nullptr) {
         return nullptr;
     }
@@ -120,7 +120,6 @@ BSTNode* BST::popMinimum() {
     }
 
     if(min == this->root) {
-        //Minimum is the root node
         this->root = min->right;
     } else {
         parent->left = min->right;
@@ -202,7 +201,7 @@ BSTNode* BST::removeHelper(BSTNode* current, int key) {
 }
 
 BSTNode* BST::findMin(BSTNode* node) {
-    while(node->left != nullptr) {
+    while(node != nullptr && node->left != nullptr) {
         node = node->left;
     }
 
